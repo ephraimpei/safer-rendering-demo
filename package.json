@@ -2,7 +2,7 @@
   "name": "safer-rendering",
   "version": "1.0.0",
   "description": "Demo app for safe rendering in React with ComponentDidCatch and higher order functions",
-  "repository": "https://github.com/ephraimpei/safer-rendering-demo"
+  "repository": "https://github.com/ephraimpei/safer-rendering-demo",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server"
