@@ -1,0 +1,16 @@
+{
+  "id": "VID-1",
+  "title": "The bestest video title",
+  "show": {
+    "id": "SHW-1",
+    "title": "The Super Duper Show",
+    "season": {
+      "id": "SNS-5",
+      "season_number": 5,
+      "episode": {
+        "id": "EPI-7",
+        "episode_number": 7
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "VID-2",
+  "title": "The video with missing data",
+  "show": {
+    "id": "SHW-1",
+    "title": "The Super Duper Show",
+    "season": null
+  }
+}

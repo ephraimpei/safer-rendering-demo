@@ -1,0 +1,31 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+.video-card, .video-card__placeholder {
+  padding: 15px;
+  border: 1px solid black;
+}
+
+.video-card > * {
+  text-align: center;
+}
+
+.video-card__placeholder * {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.video-card__placeholder img {
+  width: 50%;
+}
+
+.video-grid {
+  display: flex;
+}
