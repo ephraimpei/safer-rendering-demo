@@ -1,14 +1,11 @@
 const path = require('path');
 
-const rootDir = path.resolve(__dirname, './');
-const buildDir = path.resolve(__dirname, './build');
-
 const webpackConfig = {
   entry: {
-    'main': path.resolve(rootDir, './src/index.js'),
+    'main': path.resolve(__dirname, './src/index.js'),
   },
   output: {
-    path: buildDir,
+    path: path.resolve(__dirname, './build'),
     filename: '[name].js',
   },
   devtool: 'source-map',
