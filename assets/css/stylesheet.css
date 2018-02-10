@@ -7,13 +7,29 @@ h1, h2, h3, h4, p {
   margin: 0;
 }
 
+grid {
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+
+row {
+  display: flex;
+}
+
 .video-card, .video-card__placeholder {
   padding: 15px;
   border: 1px solid black;
+  width: 100%;
 }
 
 .video-card > * {
   text-align: center;
+  margin: 10px auto;
+}
+
+.video-card__placeholder {
+  position: relative;
 }
 
 .video-card__placeholder * {
@@ -23,9 +39,12 @@ h1, h2, h3, h4, p {
 }
 
 .video-card__placeholder img {
-  width: 50%;
+  width: 25%;
 }
 
-.video-grid {
-  display: flex;
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

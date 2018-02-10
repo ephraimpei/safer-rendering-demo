@@ -1,6 +1,6 @@
 import React from 'react';
 import VideoCardPlaceholder from './VideoCardPlaceholder';
-import { renderPlaceholderOnError, skipRenderOnError } from '../higher-order-functions';
+import { renderPlaceholderOnError, skipRenderOnError } from '@higher-order-functions';
 
 export const VideoCard = ({
   title: videoTitle,
@@ -17,7 +17,9 @@ export const VideoCard = ({
   return (
     <div className="video-card">
       <h3>{ videoTitle }</h3>
-      <p>{ `From: ${showTitle}` }</p>
+      <p>{ `Show: ${showTitle}` }</p>
+      <p>{ `Season: ${season_number}` }</p>
+      <p>{ `Episode: ${episode_number}` }</p>
     </div>
   );
 };

@@ -16,6 +16,16 @@ const webpackConfig = {
     filename: '[name].bundle.js',
   },
   devtool: 'source-map',
+  resolve: {
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@higher-order-functions': path.resolve(__dirname, 'src/higher-order-functions'),
+      '@data': path.resolve(__dirname, 'data')
+    }
+  },
+  resolveLoader: {
+    extensions: ['.js']
+  },
   module: {
     rules: [
       {

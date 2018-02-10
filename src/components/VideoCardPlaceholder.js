@@ -3,8 +3,7 @@ import React from 'react';
 const VideoCardPlaceHolder = () => {
   return (
     <div className="video-card__placeholder">
-      <span>Error!</span>
-      <img src="svg/error-icon.svg" />
+      <img className="center" src="svg/error-icon.svg" />
     </div>
   );
 };

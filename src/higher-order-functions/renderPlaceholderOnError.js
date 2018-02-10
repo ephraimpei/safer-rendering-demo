@@ -1,5 +1,5 @@
 import React from 'react';
-import { ErrorBoundary } from '../components';
+import { ErrorBoundary } from '@components';
 
 /**
  * renderPlaceholderOnError - render a placeholder image when an error is caught from a sub component

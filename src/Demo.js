@@ -3,19 +3,28 @@ import {
   VideoCard,
   PlaceholderBoundedVideoCard,
   SkipRenderBoundedVideoCard
-} from './components';
-import invalid from '../data/invalid.json';
-import valid from '../data/valid.json';
+} from '@components';
+import invalid from '@data/invalid.json';
+import valid from '@data/valid.json';
 
 const Demo = (props) => {
   return (
     <main>
-      <grid className="video-grid">
-        <PlaceholderBoundedVideoCard { ...valid } />
-        <PlaceholderBoundedVideoCard { ...invalid } />
-        <SkipRenderBoundedVideoCard { ...valid } />
-        <SkipRenderBoundedVideoCard { ...invalid } />
-        <VideoCard { ...valid } />
+      <grid>
+        <row>
+          <PlaceholderBoundedVideoCard { ...valid } />
+          <PlaceholderBoundedVideoCard { ...invalid } />
+          <SkipRenderBoundedVideoCard { ...valid } />
+          <SkipRenderBoundedVideoCard { ...invalid } />
+          <VideoCard { ...valid } />
+        </row>
+        <row>
+          <SkipRenderBoundedVideoCard { ...valid } />
+          <PlaceholderBoundedVideoCard { ...valid } />
+          <VideoCard { ...valid } />
+          <SkipRenderBoundedVideoCard { ...invalid } />
+          <PlaceholderBoundedVideoCard { ...invalid } />
+        </row>
       </grid>
     </main>
   );
