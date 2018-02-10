@@ -1,12 +1,19 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const webpackConfig = {
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    staticOptions: {
+      index: '../index.html'
+    }
+  },
   entry: {
-    'main': path.resolve(__dirname, './src/index.js'),
+    demo: path.resolve(__dirname, 'src/index.js'),
   },
   output: {
-    path: path.resolve(__dirname, './build'),
-    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].bundle.js',
   },
   devtool: 'source-map',
   module: {
@@ -22,7 +29,12 @@ const webpackConfig = {
         loader: 'json-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: 'assets' }
+    ])
+  ]
 };
 
 module.exports = webpackConfig;
