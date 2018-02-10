@@ -7,7 +7,7 @@ import {
 import invalid from '@data/invalid.json';
 import valid from '@data/valid.json';
 
-const Demo = (props) => {
+const App = (props) => {
   return (
     <main>
       <grid>
@@ -16,7 +16,7 @@ const Demo = (props) => {
           <PlaceholderBoundedVideoCard { ...valid } />
           <PlaceholderBoundedVideoCard { ...invalid } />
           <SkipRenderBoundedVideoCard { ...valid } />
-          {/* This following component will SKIPPED */}
+          {/* This component will be SKIPPED */}
           <SkipRenderBoundedVideoCard { ...invalid } />
           <VideoCard { ...valid } />
         </row>
@@ -28,9 +28,17 @@ const Demo = (props) => {
           <SkipRenderBoundedVideoCard { ...valid } />
           <PlaceholderBoundedVideoCard { ...invalid } />
         </row>
+        {/* This row will also render 5 items */}
+        <row>
+          <PlaceholderBoundedVideoCard { ...valid } />
+          <PlaceholderBoundedVideoCard { ...invalid } />
+          <PlaceholderBoundedVideoCard { ...invalid } />
+          <SkipRenderBoundedVideoCard { ...valid } />
+          <VideoCard { ...valid } />
+        </row>
       </grid>
     </main>
   );
 };
 
-export default Demo;
+export default App;

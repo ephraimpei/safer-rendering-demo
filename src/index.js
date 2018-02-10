@@ -1,10 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Demo from './Demo';
+import App from './App';
 
 const rootElement = document.getElementById('root');
 
-render(
-  <Demo />,
-  rootElement
-);
+render(<App />, rootElement);
