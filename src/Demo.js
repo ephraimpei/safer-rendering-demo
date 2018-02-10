@@ -11,18 +11,21 @@ const Demo = (props) => {
   return (
     <main>
       <grid>
+        {/* This row will render 4 items since one is skipped */}
         <row>
           <PlaceholderBoundedVideoCard { ...valid } />
           <PlaceholderBoundedVideoCard { ...invalid } />
           <SkipRenderBoundedVideoCard { ...valid } />
+          {/* This following component will SKIPPED */}
           <SkipRenderBoundedVideoCard { ...invalid } />
           <VideoCard { ...valid } />
         </row>
+        {/* This row will render 5 items */}
         <row>
-          <SkipRenderBoundedVideoCard { ...valid } />
+          <PlaceholderBoundedVideoCard { ...invalid } />
           <PlaceholderBoundedVideoCard { ...valid } />
           <VideoCard { ...valid } />
-          <SkipRenderBoundedVideoCard { ...invalid } />
+          <SkipRenderBoundedVideoCard { ...valid } />
           <PlaceholderBoundedVideoCard { ...invalid } />
         </row>
       </grid>
